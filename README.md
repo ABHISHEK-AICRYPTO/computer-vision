@@ -4,65 +4,48 @@ Welcome to my OpenCV projects! Click on any topic below to jump directly to its 
 
 - [1. Basic Fixed Thresholding](#1-basic-fixed-thresholding)
 - [2. Otsu's Automatic Thresholding](#2-otsus-automatic-thresholding)
-
-
-
----
+  
 
 ## 1. Basic Fixed Thresholding
 ### File: `1_thresh_binary.py`
-# 🌸 Iris Flower Classification using Bagging Ensemble Method
+# 👁️ Computer Vision - Image Thresholding using OpenCV
 
-This project demonstrates the implementation of an **Ensemble Learning** technique using Scikit-Learn. It utilizes a **Bagging Classifier** with a **Decision Tree** as the base estimator to classify the famous Iris flower dataset.
-- [1. Basic Fixed Thresholding](./1_thresh_binary.py)
+This is a beginner-friendly **Computer Vision** project that demonstrates how to load a colored image and convert it into Grayscale and Binary (Black & White) formats using **OpenCV** in Python.
+
 ## 🚀 Features
-- Uses the classic **Iris Dataset** (150 samples, 4 features, 3 classes).
-- Implements **Bagging (Bootstrap Aggregating)** to reduce variance and prevent overfitting.
-- Evaluates model performance using **Accuracy Score** on both training and testing subsets.
-- Maps numerical predictions back to actual biological class names (`setosa`, `versicolor`, `virginica`).
-
-## 📊 Model Performance
-The model achieves perfect classification scores due to the clean boundary separations of the Iris dataset:
-- **Training Accuracy:** 100% (`1.0`)
-- **Testing Accuracy:** 100% (`1.0`)
+- Loads and processes local images.
+- Converts colored BGR images to **Grayscale**.
+- Applies **Binary Thresholding** (Threshold value: 127) to separate the foreground from the background.
+- Displays all three versions (Original, Grayscale, and Binary) simultaneously in separate interactive windows.
 
 ## 🛠️ Prerequisites
-To run this machine learning script or Jupyter notebook, you need Python installed along with the **scikit-learn** library. You can install it via pip:
+Before running the script, make sure you have Python installed, and then install the **OpenCV** library using pip:
 
 ```bash
-pip install scikit-learn
+pip install opencv-python
 ```
 
-## 💻 Code Overview & Implementation
-The core script splits the dataset into an 80/20 train-test ratio and fits 10 ensemble Decision Trees:
+## 💻 How to Run
+1. Clone or download this repository to your local machine.
+2. Open the script (`1_thresh_binary.py`) and update the image path (`C:\Users\Lenovo\...`) to point to an image on your computer.
+3. Run the script via your terminal or command prompt:
 
-```python
-from sklearn.ensemble import BaggingClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-# Load and split dataset
-data = load_iris()
-X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)
-
-# Initialize Bagging Classifier
-base_classifier = DecisionTreeClassifier()
-bagging_classifier = BaggingClassifier(base_classifier, n_estimators=10, random_state=42)
-
-# Train the model
-bagging_classifier.fit(X_train, y_train)
-
-# Predictions
-y_pred = bagging_classifier.predict(X_test)
+```bash
+python 1_thresh_binary.py.py
 ```
 
-## 🔍 Sample Prediction Output
-When mapping the predicted target arrays to actual species names, the model outputs:
-`['versicolor', 'setosa', 'virginica', 'versicolor', ...]`
+## 📊 Visual Outputs
+When you run the code, three distinct windows will pop up:
+1. **original**: The untouched colored input image.
+2. **gray**: The image converted to a single-channel grayscale layout.
+3. **binary**: A stark, high-contrast black-and-white output based on your thresholding limit.
+4. #original image
+<img width="670" height="350" alt="image" src="https://github.com/user-attachments/assets/32f6c757-ff5a-43ce-873b-96c969495bac" />
+5.#output image
+<img width="670" height="350" alt="image" src="https://github.com/user-attachments/assets/257c3147-9666-4798-9443-1e1b43195e78" />
 
----
+*Note: Press any key on your keyboard while focusing on the windows to safely close them.*
+
 
 ## 2. Otsu's Automatic Thresholding
 ### File: `2_otsu_binary.py`
@@ -103,5 +86,11 @@ print(f"Otsu's calculated threshold: {thresh_val}")
 When executed, the program renders two real-time visual outputs:
 1. **original**: The raw, untouched input image.
 2. **Otsu's_binary**: The cleanly separated high-contrast black-and-white output.
+3. original image
+<img width="488" height="350" alt="image" src="https://github.com/user-attachments/assets/75d43fdc-7f56-4e75-8c4a-b58fbda256df" />
+
+4.output image
+<img width="488" height="350" alt="image" src="https://github.com/user-attachments/assets/09aa2c51-894b-46ad-b294-20b14e1bfd74" />
+
 
 *Note: Focus on any of the active output windows and press any key to close them safely.*
