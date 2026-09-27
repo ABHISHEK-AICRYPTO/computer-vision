@@ -2,8 +2,10 @@
 
 Welcome to my OpenCV projects! Click on any topic below to jump directly to its documentation:
 
-- [1. Basic Fixed Thresholding](#1_thresh_binary.py)
-- [2. Otsu's Automatic Thresholding](#2_otsu_binary.py)
+- [1. Basic Fixed Thresholding](#1-basic-fixed-thresholding)
+- [2. Otsu's Automatic Thresholding](#2-otsus-automatic-thresholding)
+
+
 
 ---
 
@@ -12,7 +14,7 @@ Welcome to my OpenCV projects! Click on any topic below to jump directly to its 
 # 🌸 Iris Flower Classification using Bagging Ensemble Method
 
 This project demonstrates the implementation of an **Ensemble Learning** technique using Scikit-Learn. It utilizes a **Bagging Classifier** with a **Decision Tree** as the base estimator to classify the famous Iris flower dataset.
-
+- [1. Basic Fixed Thresholding](./1_thresh_binary.py)
 ## 🚀 Features
 - Uses the classic **Iris Dataset** (150 samples, 4 features, 3 classes).
 - Implements **Bagging (Bootstrap Aggregating)** to reduce variance and prevent overfitting.
@@ -67,7 +69,7 @@ When mapping the predicted target arrays to actual species names, the model outp
 # 🧤 Otsu's Automatic Image Thresholding
 
 This project implements **Otsu's Binarization** method using **OpenCV** in Python. Unlike standard thresholding where you have to manually guess a threshold value, Otsu's algorithm automatically calculates the optimal threshold limit from the image's pixel histogram.
-
+- [2. Otsu's Automatic Thresholding](./2_otsu_binary.py)
 ## 🚀 Features
 - Converts a standard colored image into **Grayscale**.
 - Automatically determines the ideal threshold value using `cv2.THRESH_OTSU`.
