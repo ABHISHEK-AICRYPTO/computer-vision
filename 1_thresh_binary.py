@@ -6,5 +6,5 @@ cv2.imshow("gray",gray)
 cv2.imshow("original",img)
 cv2.imshow("binary",binary)
 cv2.waitKey(0)
-cv2.destroyAllWindOWS()
+cv2.destroyAllWindows()
 
